@@ -141,8 +141,8 @@ test_transform = transforms.Compose(
 # --------------------------------------------------------
 unet_model = UNet(n1=3, n2=1).to(device)
 optimizer = optim.Adam(unet_model.parameters(), lr=1e-4)
-train_dataset = GetDataset(img_dir='E:/pycharm_code/huzhoucollege/data/semantic-seg/train_imgs/',
-                           mask_dir='E:/pycharm_code/huzhoucollege/data/semantic-seg/train_masks/', flag='train')
+train_dataset = GetDataset(img_dir='./data/semantic-seg/train_imgs/',
+                           mask_dir='./data/semantic-seg/train_masks/', flag='train')
 train_loader = DataLoader(train_dataset,batch_size=32,num_workers=0,pin_memory=True,shuffle=True)
 
 for ep in range(10):
@@ -173,8 +173,8 @@ def showTwoimgs(imgs, stitle='', rows=1, cols=2):
     plt.show()
 unet_model = torch.load('unet_model', weights_only=False)  # unet_model10 是没有被覆盖的
 unet_model.eval()
-val_dataset = GetDataset(img_dir='E:/pycharm_code/huzhoucollege/data/semantic-seg/val_imgs/',
-                         mask_dir='E:/pycharm_code/huzhoucollege/data/semantic-seg/val_masks/', flag='test')
+val_dataset = GetDataset(img_dir='./data/semantic-seg/val_imgs/',
+                         mask_dir='./data/semantic-seg/val_masks/', flag='test')
 val_loader = DataLoader(val_dataset,batch_size=16,num_workers=0,pin_memory=True,shuffle=True)
 num_correct = 0
 num_pixels = 0

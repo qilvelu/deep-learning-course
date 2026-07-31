@@ -11,8 +11,8 @@ MAX_LENGTH = 30
 jieba.setLogLevel(jieba.logging.INFO)  # 屏蔽jieba分词时出现的提示信息
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 # 加载数据集
-path = r'.\data\translate'
-fg = open(path + '\\' + "en_zh_data.txt", encoding='utf-8')
+path = r'./data/translate'
+fg = open(path + '/' + "en_zh_data.txt", encoding='utf-8')
 lines = list(fg)  # 把整个文件放到列表中去   encoding=‘utf-8’  UTF-8
 fg.close()
 pairs = []

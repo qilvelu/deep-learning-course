@@ -14,7 +14,7 @@ batch_size = 512
 def tfm(x):
     x = tfs.ToTensor()(x)
     return  (x - 0.5) / 0.5
-train_set = MNIST(root='E:/pycharm_code/huzhoucollege/data/mnist2',train=True,download=True,transform=tfm)
+train_set = MNIST(root='./data/mnist2',train=True,download=True,transform=tfm)
 train_data = DataLoader(train_set, batch_size=batch_size, shuffle=True)
 
 
@@ -101,7 +101,7 @@ torch.save(generator,'generator')"""
 
 size = 16
 
-generator = torch.load('C:/Users/2023283614/Desktop/minist_generator',map_location=torch.device('cpu'), weights_only=False).to(device)
+generator = torch.load('./data/minist_generator',map_location=torch.device('cpu'), weights_only=False).to(device)
 noise_data = torch.rand(size, noise_len).to(device)  # 生成噪声数据,torch.Size([512, 96])
 noise_data = (noise_data-0.5)/0.5
 fake_img = generator(noise_data)

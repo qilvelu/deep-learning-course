@@ -11,7 +11,7 @@ import random
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 # ============= 以下开始读数据并打包 =====================
-path = r'D:/pycharm_code/data/flower_photos'
+path = r'./data/flower_photos'
 #以下函数获取指定目录所有文件名（含路径）及其所属类的编号（每个目录一个类）
 def getFileLabel(tmp_path):
     dirs = list(os.walk(tmp_path))[0][1]
@@ -64,7 +64,7 @@ test_loader = DataLoader(dataset=test_dataset,  #打包
 googlenet_base = models.googlenet(num_classes=5, aux_logits=True, init_weights=True)
 
 model_dict = googlenet_base.state_dict()
-pretrain_model = torch.load(f"D:/pycharm_code/pre_models/googlenet-1378be20.pth", weights_only=False)  #加载最新的模型参数
+pretrain_model = torch.load("./data/pre_models/googlenet-1378be20.pth", weights_only=False)  #加载最新的模型参数
 
 del_list = ["aux1.fc2.weight", "aux1.fc2.bias",
 "aux2.fc2.weight", "aux2.fc2.bias",

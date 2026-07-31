@@ -21,7 +21,7 @@ random.seed(123)
 np.random.seed(10)
 
 # ===============================================================
-dir_path = 'E:/pycharm_code/huzhoucollege/data/faces/training'
+dir_path = './data/faces/training'
 
 
 # 训练数据集获取

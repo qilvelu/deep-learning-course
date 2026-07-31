@@ -11,7 +11,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # 加载数据集
 dataset = datasets.ImageFolder(
-    root="E:/pycharm_code/huzhoucollege/data/flower_dataset",  # 这种方式读取文件时，root指定的目录下必须有且仅有一级子目录，每个子目录就是一个类别
+    root="./data/flower_dataset",  # 这种方式读取文件时，root指定的目录下必须有且仅有一级子目录，每个子目录就是一个类别
     transform=transforms.Compose([
         transforms.Resize((64 ,64)),
         transforms.ToTensor(),
@@ -122,9 +122,9 @@ for epoch in range(EPOCH):
             % (epoch, EPOCH, i, len(data_loader), d_loss.item(), g_loss.item())
         )
 
-torch.save(generator ,'flower_generator200')
+torch.save(generator, './data/flower_generator200')
 # exit(0)
-generator = torch.load('E:/pycharm_code/huzhoucollege/flower_generator200', weights_only=False).to(device)
+generator = torch.load('./data/flower_generator200', weights_only=False).to(device)
 generator.eval()
 z = torch.randn(128, 100, 1, 1).to(device)  # torch.Size([128, 100, 1, 1])
 gen_imgs = generator(z)
