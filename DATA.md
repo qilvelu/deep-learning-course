@@ -6,7 +6,7 @@
 |------|------|----------|----------------|
 | 实验 | 文件 | 所需数据 | 获取 / 放置方式（均为相对仓库根目录的路径） |
 |------|------|----------|----------------|
-| 例5.3 GoogLeNet 迁移 | `googlenet_transfer.py` | ① 花卉图片（按类别子目录）；② GoogLeNet 预训练权重 | ① Oxford 102 Flowers 等，放到 `./data/flower_photos/`（每子目录一类）；② 把 `googlenet-1378be20.pth` 放到 `./data/pre_models/`（脚本第 67 行会加载它） |
+| 例5.3 GoogLeNet 迁移 | `googlenet_transfer.py` | 花卉图片（按类别子目录） | Oxford 102 Flowers 等，放到 `./data/flower_photos/`（每子目录一类）。GoogLeNet 的 ImageNet 预训练权重由 `torchvision` **自动下载**，无需手动准备 |
 | 例6.1 人脸识别 | `face_recognition.py` | 按类别子目录组织的人脸图片 | 自行准备或公开人脸数据集；训练集放 `./data/faces/training/`，测试集放 `./data/faces/testing/`（每子目录一类） |
 | 例6.2 语义分割 | `unet_segmentation.py` | 图像 + 掩码配对 | 放到 `./data/semantic-seg/{train_imgs,val_imgs,train_masks,val_masks}/` |
 | 例6.8 GAN 花卉 | `gan_flowers.py` | 花卉图片（ImageFolder 按类别子目录） | 放到 `./data/flower_dataset/`（每子目录一类）；训练好的生成器会保存到 `./data/flower_generator200` |

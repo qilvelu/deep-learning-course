@@ -1,0 +1,12 @@
+# 深度学习基础课程实验依赖
+# 基础框架
+torch>=1.12
+torchvision>=0.13
+# 数值与可视化
+numpy
+matplotlib
+# 传统机器学习 / 数据处理
+scikit-learn
+pandas
+# 中文分词（LSTM 写小说、英中翻译实验需要）
+jieba

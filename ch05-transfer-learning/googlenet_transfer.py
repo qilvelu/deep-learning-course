@@ -1,6 +1,7 @@
 import torch
 import torch.nn as nn
 from torchvision import models
+from torchvision.models import GoogLeNet_Weights
 import torch.optim as optim
 from torch.utils.data import DataLoader,Dataset
 import os
@@ -64,7 +65,8 @@ test_loader = DataLoader(dataset=test_dataset,  #打包
 googlenet_base = models.googlenet(num_classes=5, aux_logits=True, init_weights=True)
 
 model_dict = googlenet_base.state_dict()
-pretrain_model = torch.load("./data/pre_models/googlenet-1378be20.pth", weights_only=False)  #加载最新的模型参数
+# 自动下载 ImageNet 预训练权重（首次运行会自动下载并缓存，不再依赖本地 .pth 文件）
+pretrain_model = models.googlenet(weights=GoogLeNet_Weights.IMAGENET1K_V1).state_dict()
 
 del_list = ["aux1.fc2.weight", "aux1.fc2.bias",
 "aux2.fc2.weight", "aux2.fc2.bias",

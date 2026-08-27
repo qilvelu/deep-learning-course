@@ -2,6 +2,7 @@
 data/
 *.csv
 *.txt
+!requirements.txt
 *.npy
 *.npz
 *.pt
