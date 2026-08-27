@@ -43,7 +43,7 @@ python ch03-vision-generation/gan_mnist_unconditional.py
 
 ## 运行结果示例
 
-各实验的典型产出如下（建议把运行截图放入 `results/` 目录并贴在本章节下，让仓库更直观）：
+各实验的典型产出如下：
 
 | 实验 | 典型输出 |
 |------|----------|
@@ -57,9 +57,6 @@ python ch03-vision-generation/gan_mnist_unconditional.py
 | 例7.1 / 7.2 航空旅客 | 旅客数量时间序列预测曲线 |
 | 例7.4 LSTM 写小说 | 模型续写的中文段落 |
 | 例8.1 / 8.2 英中翻译 | 英 → 中 翻译结果（注意力版质量更高） |
-
-> 想让仓库更直观？把运行生成的图片保存到 `results/`（已留位），并在这里引用，例如：
-> `![GAN 生成的手写数字](results/gan_mnist_samples.png)`
 
 ## 说明
 
