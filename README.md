@@ -24,11 +24,11 @@ deep-learning-course/
 ├── requirements.txt
 ├── .gitignore
 ├── DATA.md                      # 各实验所需外部数据获取与放置说明
-├── ch02-basics/                 # 二分类（NumPy / PyTorch）
-├── ch05-transfer-learning/      # 迁移学习（VGG16 / GoogLeNet）
-├── ch06-vision-generation/      # 计算机视觉与生成模型（人脸识别 / UNet / GAN）
-├── ch07-recurrent-nn/           # 循环神经网络（航空旅客预测 / 从零实现 RNN / LSTM 写小说）
-└── ch08-seq2seq/                # 序列到序列翻译（基础 Seq2Seq / 加入注意力机制）
+├── ch01-basics/                 # 二分类（NumPy / PyTorch）
+├── ch02-transfer-learning/      # 迁移学习（VGG16 / GoogLeNet）
+├── ch03-vision-generation/      # 计算机视觉与生成模型（人脸识别 / UNet / GAN）
+├── ch04-recurrent-nn/           # 循环神经网络（航空旅客预测 / 从零实现 RNN / LSTM 写小说）
+└── ch05-seq2seq/                # 序列到序列翻译（基础 Seq2Seq / 加入注意力机制）
 ```
 
 ## 运行方式
@@ -36,7 +36,7 @@ deep-learning-course/
 进入对应章节目录，直接运行脚本即可，例如：
 
 ```bash
-python ch06-vision-generation/gan_mnist_unconditional.py
+python ch03-vision-generation/gan_mnist_unconditional.py
 ```
 
 部分实验（MNIST 等）所需数据会在首次运行时自动下载；其余需要自备数据的实验请参考 [DATA.md](DATA.md) 与各章 README。

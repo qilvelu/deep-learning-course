@@ -9,7 +9,7 @@
 运行示例：
 
 ```bash
-python ch07-recurrent-nn/air_passengers_forecast.py
+python ch04-recurrent-nn/air_passengers_forecast.py
 ```
 
 > 需要外部数据的实验，请先参照 [../DATA.md](../DATA.md) 准备数据。

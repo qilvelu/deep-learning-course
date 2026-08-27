@@ -8,7 +8,7 @@
 运行示例：
 
 ```bash
-python ch08-seq2seq/seq2seq_translation.py
+python ch05-seq2seq/seq2seq_translation.py
 ```
 
 > 需要外部数据的实验，请先参照 [../DATA.md](../DATA.md) 准备数据。

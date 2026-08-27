@@ -11,7 +11,7 @@
 运行示例：
 
 ```bash
-python ch06-vision-generation/face_recognition.py
+python ch03-vision-generation/face_recognition.py
 ```
 
 > 需要外部数据的实验，请先参照 [../DATA.md](../DATA.md) 准备数据。

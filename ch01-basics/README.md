@@ -8,7 +8,7 @@
 运行示例：
 
 ```bash
-python ch02-basics/binary_classification_numpy.py
+python ch01-basics/binary_classification_numpy.py
 ```
 
 > 需要外部数据的实验，请先参照 [../DATA.md](../DATA.md) 准备数据。

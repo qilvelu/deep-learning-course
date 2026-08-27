@@ -8,7 +8,7 @@
 运行示例：
 
 ```bash
-python ch05-transfer-learning/vgg16_transfer.py
+python ch02-transfer-learning/vgg16_transfer.py
 ```
 
 > 需要外部数据的实验，请先参照 [../DATA.md](../DATA.md) 准备数据。

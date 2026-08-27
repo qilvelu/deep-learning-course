@@ -11,4 +11,4 @@
 - `seq2seq_translation.png` —— 例8.1 / 8.2 翻译样例
 - `face_recognition.png` —— 例6.1 人脸识别结果
 
-> 本目录下的 `*.png` 已被 `.gitignore` 放行（见仓库根 `.gitignore` 的 `!results/*.png`），提交后会上传到 GitHub。
+> 本目录下的 `*.png` 未被根 `.gitignore` 忽略，提交后会上传到 GitHub。
